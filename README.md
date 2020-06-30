@@ -15,15 +15,16 @@ Crawls the Brazilian Supreme Federal Court's Database for judicial decisions in 
 This spider scrapes only the case and PDF links for each ADI case in the Database. The fact that the website uses javascript limits the functionality of CrawlSpiders, so I chose to split the task in two:
 - stf_get_links scrapes the relevant links and stores them in a CSV file.
 - [stf_get_csv](https://github.com/prldc/stf_get_csv) scrapes the actual case information: 
-* case brief
-* court ruling
-* internal case classification
-* relevant legislation
-* related cases
-* scholarship cited
-* decision date
-* plaintiffs
-* further observations.
+
+  * case brief
+  * court ruling
+  * internal case classification
+  * relevant legislation
+  * related cases
+  * scholarship cited
+  * decision date
+  * plaintiffs
+  * further observations.
 
 
 
