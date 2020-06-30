@@ -38,4 +38,4 @@ class LinkbotSpider(scrapy.Spider):
             absolute_url = f"https://jurisprudencia.stf.jus.br/pages/search?base=acordaos&sinonimo=true&plural=true&page={next_page}&pageSize=100&queryString=adi&sort=_score&sortBy=desc"
             yield SplashRequest(url=absolute_url, callback=self.parse, endpoint="execute", args={
                 'lua_source': self.script
-            }
+            })
