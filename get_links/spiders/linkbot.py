@@ -13,7 +13,14 @@ class LinkbotSpider(scrapy.Spider):
                    return splash:html()
                 end
            '''
-
+    custom_settings = {
+        'FEED_URI': 'scraped_file.csv',
+        'FEED_FORMAT': 'csv',
+        'FEED_EXPORTERS': {
+            'csv': 'scrapy.exporters.CsvItemExporter',
+        },
+        'FEED_EXPORT_ENCODING': 'utf-8'
+    }
     def start_requests(self):
         yield SplashRequest(
             url="https://jurisprudencia.stf.jus.br/pages/search?base=acordaos&sinonimo=true&plural=true&page=1&pageSize=100&queryString=adi&sort=_score&sortBy=desc",
